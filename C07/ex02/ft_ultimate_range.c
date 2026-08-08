@@ -1,42 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jabernar <jabernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/30 12:57:14 by jabernar          #+#    #+#             */
-/*   Updated: 2026/08/08 21:44:41 by jabernar         ###   ########.fr       */
+/*   Created: 2026/08/08 22:15:56 by jabernar          #+#    #+#             */
+/*   Updated: 2026/08/08 23:24:25 by jabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdlib.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_ultimate_range(int **range, int min, int max)
 {
-	unsigned int	i;
+	int	*arr;
+	int	i;
 
+	*range += 1;
+	if (min >= max)
+	{
+		*range = NULL;
+		return (0);
+	}
+	arr = malloc(sizeof(int) * max - min);
+	if (!arr)
+		return (NULL);
 	i = 0;
-	while (i < n && src[i])
+	while (i < (max - min))
 	{
-		dest[i] = src[i];
+		arr[i] = min + i;
 		i++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
-}
-
-int	main(void)
-{
-	char	src[] = "seagull";
-	char	dest[sizeof(src)];
-	unsigned int	n;
-	
-	n = 3;
-	ft_strncpy(dest, src, n);
-	printf("%s\n", dest);
+	return (**range);
 }

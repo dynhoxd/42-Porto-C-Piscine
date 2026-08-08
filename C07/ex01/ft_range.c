@@ -1,42 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jabernar <jabernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/30 12:57:14 by jabernar          #+#    #+#             */
-/*   Updated: 2026/08/08 21:44:41 by jabernar         ###   ########.fr       */
+/*   Created: 2026/08/08 20:51:31 by jabernar          #+#    #+#             */
+/*   Updated: 2026/08/08 23:03:58 by jabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <stdio.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	*ft_range(int min, int max)
 {
-	unsigned int	i;
+	int	*arr;
+	int	i;
 
+	if (min >= max)
+		return (NULL);
+	arr = malloc(sizeof(int) * (max - min));
+	if (arr == NULL)
+		return (NULL);
 	i = 0;
-	while (i < n && src[i])
+	while (i < (max - min))
 	{
-		dest[i] = src[i];
+		arr[i] = min + i;
 		i++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return (arr);
 }
-
+/*
 int	main(void)
 {
-	char	src[] = "seagull";
-	char	dest[sizeof(src)];
-	unsigned int	n;
-	
-	n = 3;
-	ft_strncpy(dest, src, n);
-	printf("%s\n", dest);
+	int	*arr;
+	int	i = 0;
+	int	min = 4;
+	int max = 9;
+
+	if (min >= max)
+		return (0);
+	arr = malloc(max - min);
+	if (!arr)
+		return (0);
+	arr = ft_range(4, 9);
+	while (i < (max - min))
+		printf("%i\n", arr[i++]);
+	return 0;
 }
+*/
