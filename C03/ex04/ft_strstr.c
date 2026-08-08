@@ -6,7 +6,7 @@
 /*   By: jabernar <jabernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/02 17:09:11 by jabernar          #+#    #+#             */
-/*   Updated: 2026/08/04 19:10:57 by jabernar         ###   ########.fr       */
+/*   Updated: 2026/08/08 20:25:37 by jabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_strstr(char *str, char *to_find)
 
 	i = 0;
 	len = 0;
-	if (!to_find[0])
-		return (&str[0]);
+	if (!to_find[i])
+		return (str);
 	while (to_find[len])
 		len++;
 	while (str[i + (len - 1)])

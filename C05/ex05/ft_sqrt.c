@@ -6,7 +6,7 @@
 /*   By: jabernar <jabernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 16:41:21 by jabernar          #+#    #+#             */
-/*   Updated: 2026/08/06 17:45:53 by jabernar         ###   ########.fr       */
+/*   Updated: 2026/08/07 13:04:27 by jabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_sqrt(int nb)
 /*
 int	main(void)
 {
-	printf("%i\n", ft_sqrt(100);
+	printf("%i\n", ft_sqrt(100));
 	return 0;
 }
 */

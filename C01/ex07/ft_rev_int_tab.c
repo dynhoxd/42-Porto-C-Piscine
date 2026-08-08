@@ -6,7 +6,7 @@
 /*   By: jabernar <jabernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 13:00:25 by jabernar          #+#    #+#             */
-/*   Updated: 2026/07/30 11:42:44 by jabernar         ###   ########.fr       */
+/*   Updated: 2026/08/08 20:26:36 by jabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_rev_int_tab(int *tab, int size)
 		tab[size - 1 - (i++)] = temp_value;
 	}
 }
-
+/*
 int	main(void)
 {
 	int	arr[] = {1, 2, 3, 4, 5, 6, 7};
@@ -44,3 +44,4 @@ int	main(void)
 	}
 	printf("\n");
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: jabernar <jabernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 15:02:28 by jabernar          #+#    #+#             */
-/*   Updated: 2026/08/06 17:45:00 by jabernar         ###   ########.fr       */
+/*   Updated: 2026/08/07 13:08:20 by jabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_recursive_power(int nb, int power)
 		return (1);
 	if (power > 1)
 	{
-		return ((nb *= ft_recursive_power(nb, --power)));
+		return (nb *= ft_recursive_power(nb, --power));
 	}
 	return (nb);
 }
