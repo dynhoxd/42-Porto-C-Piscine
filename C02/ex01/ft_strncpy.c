@@ -6,7 +6,7 @@
 /*   By: jabernar <jabernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/30 12:57:14 by jabernar          #+#    #+#             */
-/*   Updated: 2026/08/08 21:44:41 by jabernar         ###   ########.fr       */
+/*   Updated: 2026/08/09 17:39:35 by jabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
-
+/*
 int	main(void)
 {
 	char	src[] = "seagull";
@@ -40,3 +40,4 @@ int	main(void)
 	ft_strncpy(dest, src, n);
 	printf("%s\n", dest);
 }
+*/

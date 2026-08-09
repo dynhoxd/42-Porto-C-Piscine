@@ -6,31 +6,38 @@
 /*   By: jabernar <jabernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/08 22:15:56 by jabernar          #+#    #+#             */
-/*   Updated: 2026/08/08 23:24:25 by jabernar         ###   ########.fr       */
+/*   Updated: 2026/08/09 17:34:36 by jabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 int	ft_ultimate_range(int **range, int min, int max)
 {
-	int	*arr;
 	int	i;
 
-	*range += 1;
 	if (min >= max)
 	{
-		*range = NULL;
+		*range = 0;
 		return (0);
 	}
-	arr = malloc(sizeof(int) * max - min);
-	if (!arr)
-		return (NULL);
+	*range = malloc(sizeof(int) * (max - min));
+	if (!(*range))
+		return (-1);
 	i = 0;
 	while (i < (max - min))
 	{
-		arr[i] = min + i;
+		(*range)[i] = min + i;
 		i++;
 	}
-	return (**range);
+	return (max - min);
 }
+/*
+int	main(void)
+{
+	int	*arr;
+	printf("%i\n", ft_ultimate_range(&arr, 1, 5));
+	return 0;	
+}
+*/
