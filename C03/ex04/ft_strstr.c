@@ -27,7 +27,7 @@ char	*ft_strstr(char *str, char *to_find)
 	while (str[i + (len - 1)])
 	{
 		j = 0;
-		while (str[i + j] == to_find[j] && to_find[j])
+		while (str[i + j] == to_find[j])
 		{
 			j++;
 			if (!to_find[j])
@@ -37,13 +37,12 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0); // correcao aqui
 }
-/*
+
 int	main(void)
 {
 	char s[] = "qwerty";
-	char f[] = "";
+	char f[] = "rt";
 	
 	char *result = ft_strstr(s, f);
 	printf("%s\n", result);
 }
-*/
