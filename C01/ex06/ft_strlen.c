@@ -29,6 +29,6 @@ int	main(void)
 	char	*str;
 
 	str = "cat";
-	printf("%i", ft_strlen(str));
+	printf("%i\n", ft_strlen(str));
 }
 */

@@ -17,10 +17,8 @@ void	ft_putstr(char *str)
 	int	size;
 
 	size = 0;
-	while (str[size] != '\0')
-	{
+	while (str[size])
 		size++;
-	}
 	write(1, str, size);
 	write(1, "\n", 1);
 }
