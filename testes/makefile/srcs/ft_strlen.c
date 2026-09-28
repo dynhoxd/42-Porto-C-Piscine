@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jabernar <jabernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/24 13:00:16 by jabernar          #+#    #+#             */
-/*   Updated: 2026/07/25 14:08:05 by jabernar         ###   ########.fr       */
+/*   Created: 2026/07/26 17:13:59 by jabernar          #+#    #+#             */
+/*   Updated: 2026/07/30 11:44:55 by jabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <unistd.h>
+#include "ft.h"
 
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
-	write(1, "\n", 1);
+	int	count;
+
+	count = 0;
+	while (str[count])
+		count++;
+	return (count);
 }
-/*
-int		main(void){
-		
-	char c = 'a';
-	ft_putchar(c);
-}
-*/

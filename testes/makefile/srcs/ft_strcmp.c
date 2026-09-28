@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jabernar <jabernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/24 13:00:16 by jabernar          #+#    #+#             */
-/*   Updated: 2026/07/25 14:08:05 by jabernar         ###   ########.fr       */
+/*   Created: 2026/07/31 12:17:22 by jabernar          #+#    #+#             */
+/*   Updated: 2026/08/01 22:21:29 by jabernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "ft.h"
 
-void	ft_putchar(char c)
+int	ft_strcmp(char *s1, char *s2)
 {
-	write(1, &c, 1);
-	write(1, "\n", 1);
+	int	i;
+
+	i = 0;
+	while (s1[i] || s2[i])
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (0);
 }
-/*
-int		main(void){
-		
-	char c = 'a';
-	ft_putchar(c);
-}
-*/

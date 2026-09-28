@@ -1,17 +1,20 @@
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -g
-SRCS = $(wildcard *.c)
-OBJS = $(SRCS:%.c=build/%.o)
+CFLAGS = -Wall -Werror -Wextra
+SRCS = srcs/ft_putchar.c srcs/ft_swap.c srcs/ft_putstr.c srcs/ft_strlen.c srcs/ft_strcmp.c srcs/main.c
+OBJS = $(SRCS:srcs/%.c=srcs/%.o)
 
-programa: $(OBJS)
-	@$(CC) $(CFLAGS) $^ -o $@
+all: libft.a
 
-build/%.o: %.c
-	@mkdir -p build
-	@$(CC) -c $(CFLAGS) $< -o $@
+libft.a: $(OBJS)
+	ar crs libft.a $^
 
-run: programa
-	@./$<
+srcs/%.o: srcs/%.c
+	$(CC) -c $(CFLAGS) -I includes $< -o $@
 
 clean:
-	@rm -rf programa
+	rm -rf $(OBJS)
+
+fclean: clean
+	rm -rf libft.a
+
+re: fclean all
