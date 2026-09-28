@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 SRCS = srcs/ft_putchar.c srcs/ft_swap.c srcs/ft_putstr.c srcs/ft_strlen.c srcs/ft_strcmp.c srcs/main.c
-OBJS = $(SRCS:srcs/%.c=srcs/%.o)
+OBJS = $(SRCS:%.c=%.o)
 
 all: libft.a
 
