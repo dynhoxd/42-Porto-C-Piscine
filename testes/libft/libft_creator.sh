@@ -1,4 +1,4 @@
 gcc -c -Wall -Werror -Wextra *.c
-mkdir build
+mkdir -p build
 mv *.o ./build
 ar crs libft.a ./build/*.o
