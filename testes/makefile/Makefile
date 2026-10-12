@@ -21,6 +21,10 @@ fclean: clean
 
 re: fclean all
 
+#Regra para add ficheiros/funções bónus
+#bonus: $(NAME) $(BONUSES)
+#	ar rs $(NAME) $(BONUSES)
+
 #exec: $(NAME)
 #	$(CC) $(CFLAGS) -L. -lft -o $@
 #	./$@
