@@ -73,6 +73,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 			ft_strcat(sep, dest);
 		i++;
 	}
+	free(dest);
 	return (dest);
 }
 
