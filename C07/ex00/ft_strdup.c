@@ -31,6 +31,7 @@ char	*ft_strdup(char *src)
 		i++;
 	}
 	new_str[i] = '\0';
+	free(new_str);
 	return (new_str);
 }
 /*

@@ -18,9 +18,7 @@ int	ft_strlen(char *str)
 
 	count = 0;
 	while (str[count] != '\0')
-	{
 		count++;
-	}
 	return (count);
 }
 /*
@@ -29,6 +27,6 @@ int	main(void)
 	char	*str;
 
 	str = "cat";
-	printf("%i", ft_strlen(str));
+	printf("%i\n", ft_strlen(str));
 }
 */
